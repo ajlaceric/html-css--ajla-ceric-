@@ -9,7 +9,7 @@
   --color-accent: #c46a32;
 
   /* Neutral colours */
-  --color-white: #FF9F9FB;
+  --color-pure-off-white: #f9f9fb;
   --color-background: #dedede;
   --color-text: #222222;
   --color-muted: #666666;
@@ -21,6 +21,13 @@
   /* Typography */
   --font-heading: "Barlow Condensed", sans-serif;
   --font-body: "Lato", sans-serif;
+
+  /* Button typography */
+  --font-button: "IBM Plex Sans", sans-serif;
+  --button-font-size: 16px;
+  --button-font-weight: 600;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0.02em;
 
   /* Spacing */
   --spacing-xs: 8px;
@@ -74,25 +81,24 @@ header {
   align-items: center;
   padding: 20px 6%;
 }
-
-header > a img {
-  width: 150px;
-}
-
 header nav {
+  grid-column: 2 / 4;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 64px;
 }
 
-header nav > a {
-  color: var(--color-white);
+header > a img {
+  display: block;
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .header-icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .header-icons img {
@@ -137,29 +143,16 @@ header nav > a {
 /* =================================
    6. BUTTONS
 ================================= */
+button {
+  font-family: var(--font-button);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  letter-spacing: var(--button-letter-spacing);
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 14px 28px;
-  min-height: 48px;
-
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 600;
-
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
   background-color: var(--color-accent);
-  color: var(--color-text);
-}
-
-.btn-primary:hover {
-  background-color: #bd622b;
+  color: var(--color-white);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
 }
