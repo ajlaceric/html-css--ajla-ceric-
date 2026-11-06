@@ -27,6 +27,7 @@
   --font-heading: "Barlow Condensed", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-button: "IBM Plex Sans", sans-serif;
+  --font-label: "Archivo", sans-serif;
 
   /* Button typography */
   --font-button: "IBM Plex Sans", sans-serif;
@@ -234,4 +235,136 @@ header > a img {
   /* Interaction */
   cursor: pointer;
   text-decoration: none;
+}
+/* ==============================
+   7. FEATURED PRODUCTS
+================================= */
+
+/* Section label */
+.featured-products {
+  padding: 64px 6.25%;
+.section-heading {
+  margin-bottom: 48px;
+}
+.section-label {
+  font-family: var(--font-label);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  color: var(--color-text-body);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+/* Section heading */
+.section-heading h2 {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+/* Section description */
+font-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* Space between heading and product cards */
+.section-heading {
+  margin-bottom: 64px;
+}
+
+/* FEATURED PRODUCTS GRID */
+
+
+/* FEATURED PRODUCTS GRID */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1030px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: #f1f1f0;
+  text-align: center;
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Product information */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 12px 28px;
+  gap: 10px;
+}
+
+/* Product category */
+.product-category {
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Product title */
+.product-info h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Product price */
+.product-price {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* View product link */
+.product-info .btn {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #0a3641;
+  text-decoration: none;
+  border-bottom: 1px solid #c76b32;
+  padding-bottom: 4px;
+  margin-top: 2px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    padding: 0 16px;
+  }
 }
