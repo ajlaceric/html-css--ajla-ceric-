@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Days | Shows all products</title>
+    <title>Rainy Days | All jackets</title>
     <meta
       name="description"
       content="Discover jacket features, materials, sizing, and weather protection at Rainy Days. Find the right outdoor jacket for your next adventure."
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
       <a href="index.html">
         <img src="images/logo-150x80.svg" alt="Rainy Days homepage" />
       </a>
+
       <nav>
         <div class="nav-links">
           <a href="product-listing.html">Shop Jackets</a>
@@ -33,65 +35,206 @@
           /></a>
         </div>
       </nav>
+
+      <span class="menu-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </header>
+
     <main>
-      <section>
-        <h1>Shop outdoor jackets</h1>
-        <article>
-          <img
-            src="images/jacket-image-1.png"
-            alt="Orange and grey outdoor jacket with reflective strips"
-          />
-          <h2>Summit Pro Jacket</h2>
-          <p>$229.99</p>
-          <a href="product-detail.html">View details</a>
-        </article>
-        <article>
-          <img
-            src="images/jacket-image-2.png"
-            alt="Black cycling jacket with a full-length front zipper"
-          />
-          <h2>Motion Lite Womans Jacket</h2>
-          <p>$119.99</p>
-          <a href="product-detail.html">View details</a>
-        </article>
-        <article>
-          <img
-            src="images/jacket-image-3.png"
-            alt="Black Scott jacket with white geometric panels, a high stand-up collar, and a bright yellow chest zipper and logo"
-          />
-          <h2>Trailguard Pro Jacket</h2>
-          <p>$249.99</p>
-          <a href="product-detail.html">View details</a>
-        </article>
-        <article>
-          <img
-            src="images/jacket-image-4.png"
-            alt="Bright red softshell jacket with black side and sleeve panels, a full-length front zipper, and a high collar"
-          />
-          <h2>Active Softshell Jacket</h2>
-          <p>$99.99</p>
-          <a href="product-detail.html">View details</a>
-        </article>
-        <article>
-          <img
-            src="images/jacket-image-5.png"
-            alt="Black and grey Scott touring jacket with a high collar, green inner lining, multiple chest pockets"
-          />
-          <h2>Adventure Tour Jacket</h2>
-          <p>$279.99</p>
-          <a href="product-detail.html">View details</a>
-        </article>
-        <article>
-          <img
-            src="images/jacket-image-6.png"
-            alt="Olive green fleece jacket with a full-length front zipper, a stand-up collar, and two vertical side pockets"
-          />
-          <h2>Alpine Fleece Jacket</h2>
-          <p>$89.99</p>
-          <a href="product-detail.html">View details</a>
-        </article>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true"></span>
+        <span aria-current="page">All jackets</span>
+      </div>
+
+      <section class="listing-section" aria-labelledby="listing-title">
+        <div class="listing-intro">
+          <h2 id="listing-title">Rain jackets for every adventure.</h1>
+          <p>
+            Browse durable jackets made for wet weather, wind protection, and
+            outdoor movement.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <a class="product-card-image" href="product-detail.html">
+              <img
+                src="images/jackets/product-1.png"
+                alt="Orange and grey Summit Pro outdoor jacket with reflective strips"
+              />
+            </a>
+            <div class="product-card-content">
+              <p class="product-category">Heavy rain / Extreme weather</p>
+              <h2>Summit Pro Jacket</h2>
+              <p class="product-description">
+                Waterproof shell jacket built for harsh weather and exposed
+                outdoor conditions.
+              </p>
+              <p class="product-price">$229.99</p>
+              <a class="product-link" href="product-detail.html"
+                >View Details</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image" href="product-detail.html">
+              <img
+                src="images/jackets/product-2.png"
+                alt="Olive green Alpine Fleece jacket with a full-length zipper and stand-up collar"
+              />
+            </a>
+            <div class="product-card-content">
+              <p class="product-category">Fleece / Layering</p>
+              <h2>Alpine Fleece Jacket</h2>
+              <p class="product-description">
+                Warm fleece mid-layer for cold days, camping, and relaxed
+                outdoor adventures.
+              </p>
+              <p class="product-price">$99.99</p>
+              <a class="product-link" href="product-detail.html"
+                >View Details</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image" href="product-detail.html">
+              <img
+                src="images/jackets/product-3.png"
+                alt="Black Trailguard Pro touring jacket with white panels and a yellow chest zipper"
+              />
+            </a>
+            <div class="product-card-content">
+              <p class="product-category">Touring / Motorcycle</p>
+              <h2>Trailguard Pro Jacket</h2>
+              <p class="product-description">
+                Durable all-weather jacket made for rough trails, wind and
+                changing conditions.
+              </p>
+              <p class="product-price">$249.99</p>
+              <a class="product-link" href="product-detail.html"
+                >View Details</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image" href="product-detail.html">
+              <img
+                src="images/jackets/motion.lite.png"
+                alt="Black Motion Lite women's cycling jacket with a full-length front zipper"
+              />
+            </a>
+            <div class="product-card-content">
+              <p class="product-category">Lightweight / Cycling / Hiking</p>
+              <h2>Motion Lite Women's Jacket</h2>
+              <p class="product-description">
+                Lightweight wind-resistant jacket for active movement and
+                everyday outdoor use.
+              </p>
+              <p class="product-price">$119.99</p>
+              <a class="product-link" href="product-detail.html"
+                >View Details</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image" href="product-detail.html">
+              <img
+                src="images/jackets/product-5.png"
+                alt="Red Active Softshell jacket with black side and sleeve panels"
+              />
+            </a>
+            <div class="product-card-content">
+              <p class="product-category">Softshell / Active use</p>
+              <h2>Active Softshell Jacket</h2>
+              <p class="product-description">
+                Flexible softshell jacket designed for movement, wind protection
+                and cool days outdoors.
+              </p>
+              <p class="product-price">$99.99</p>
+              <a class="product-link" href="product-detail.html"
+                >View Details</a
+              >
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image" href="product-detail.html">
+              <img
+                src="images/jackets/product-6.png"
+                alt="Black and grey Adventure Tour motorcycle jacket with a green inner collar and multiple pockets"
+              />
+            </a>
+            <div class="product-card-content">
+              <p class="product-category">Touring / Motorcycle</p>
+              <h2>Adventure Tour Jacket</h2>
+              <p class="product-description">
+                Protective touring jacket with reinforced coverage for long
+                rides and wet conditions.
+              </p>
+              <p class="product-price">$279.99</p>
+              <a class="product-link" href="product-detail.html"
+                >View Details</a
+              >
+            </div>
+          </article>
+        </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/logo-footer.svg" alt="Rainy Days logo" />
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-section">
+          <h2>Shop</h2>
+          <p>Men's Jackets</p>
+          <p>Women's Jackets</p>
+          <p>New Arrivals</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h2>Contact</h2>
+          <p>Shipping</p>
+          <p>Returns</p>
+          <p>FAQ</p>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="footer-section">
+          <h2>Subscribe</h2>
+          <p>Get Outdoor Updates and Offers</p>
+
+          <div class="subscribe-form">
+            <div class="email-input">Enter your email</div>
+
+            <div class="subscribe-button">Subscribe</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Rainy Days. All rights reserved.</p>
+
+        <div class="footer-legal">
+          <p>Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
