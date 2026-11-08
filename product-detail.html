@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Days | Product details</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Rainy Days | All jackets</title>
     <meta
       name="description"
-      content="Explore detailed product information at Rainy Days. Find the right outdoor jacket for your needs, with practical features and protection for rainy weather."
+      content="Discover jacket features, materials, sizing, and weather protection at Rainy Days. Find the right outdoor jacket for your next adventure."
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -20,7 +20,6 @@
           <a href="product-listing.html">Shop Jackets</a>
           <a href="coming-soon.html">About Us</a>
         </div>
-
         <div class="header-icons">
           <a href="coming-soon.html" aria-label="Search">
             <img src="images/search.svg" alt="Search Icon" />
@@ -33,7 +32,123 @@
           /></a>
         </div>
       </nav>
+      <span class="menu-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </header>
-    <main></main>
+    
+    <main class="product-detail-page">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true"></span>
+        <a href="product-listing.html">All jackets</a>
+        <span aria-hidden="true"></span>
+        <span aria-current="page">Summit Pro Jacket</span>
+      </nav>
+
+      <section class="product-detail">
+        <div class="product-detail-image">
+          <img
+            src="images/jackets/summit.pro.png"
+            alt="Summit Pro waterproof jacket in orange and grey with reflective panels and a protective hood"
+          />
+        </div>
+
+        <div class="product-detail-info">
+          <h1>Summit Pro Jacket</h1>
+          <p class="detail-price">$229.99</p>
+          <p class="detail-description">
+            Waterproof shell with taped seams, an adjustable hood, and durable
+            wind protection for extreme weather conditions.
+            <br />
+            Built for adventure and designed to keep you dry.
+          </p>
+
+          <form class="product-options">
+            <fieldset class="size-options">
+              <legend>Size:</legend>
+              <div class="size-choice-list">
+                <label><input type="radio" name="size" value="S" /> <span>S</span></label>
+                <label><input type="radio" name="size" value="M" /> <span>M</span></label>
+                <label><input type="radio" name="size" value="L" /> <span>L</span></label>
+                <label><input type="radio" name="size" value="XL" /> <span>XL</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="color-options">
+              <legend>Color:</legend>
+              <div class="color-choice-list">
+                <label>
+                  <input type="radio" name="color" value="orange" aria-label="Orange" />
+                  <span class="color-swatch swatch-orange"></span>
+                </label>
+                <label>
+                  <input type="radio" name="color" value="grey" aria-label="Grey" />
+                  <span class="color-swatch swatch-grey"></span>
+                </label>
+                <label>
+                  <input type="radio" name="color" value="olive" aria-label="Olive" />
+                  <span class="color-swatch swatch-olive"></span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+
+          <a class="continue-shopping" href="product-listing.html">
+            <span aria-hidden="true">‹</span> Continue Shopping
+          </a>
+          <a class="detail-add-to-cart" href="cart.html">Add to Cart</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/logo-footer.svg" alt="Rainy Days logo" />
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-section">
+          <h2>Shop</h2>
+          <p>Men's Jackets</p>
+          <p>Women's Jackets</p>
+          <p>New Arrivals</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h2>Contact</h2>
+          <p>Shipping</p>
+          <p>Returns</p>
+          <p>FAQ</p>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="footer-section">
+          <h2>Subscribe</h2>
+          <p>Get Outdoor Updates and Offers</p>
+
+          <div class="subscribe-form">
+            <div class="email-input">Enter your email</div>
+
+            <div class="subscribe-button">Subscribe</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Rainy Days. All rights reserved.</p>
+
+        <div class="footer-legal">
+          <p>Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
