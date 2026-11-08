@@ -774,3 +774,237 @@ header > a img {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* =================================
+   PRODUCT DETAIL PAGE
+================================= */
+
+.product-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.product-detail-page .breadcrumb {
+  max-width: none;
+  margin: 0;
+  padding: 24px 0 36px;
+}
+
+.product-detail-page .breadcrumb a,
+.product-detail-page .breadcrumb span {
+  color: var(--color-primary);
+  font-size: 13px;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 56px;
+  min-height: 590px;
+}
+
+.product-detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.product-detail-image img {
+  width: 100%;
+  max-width: 520px;
+  max-height: 560px;
+  object-fit: contain;
+}
+
+.product-detail-info {
+  max-width: 560px;
+  width: 100%;
+}
+
+.product-detail-info h1 {
+  color: var(--color-text);
+  font-size: clamp(36px, 4vw, 44px);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.detail-price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.detail-description {
+  font-size: 16px;
+  line-height: 1.45;
+  margin-bottom: 22px;
+}
+
+.product-options {
+  border-top: 1px solid #cbd1d2;
+  padding-top: 14px;
+}
+
+.product-options fieldset {
+  border: 0;
+  margin: 0 0 26px;
+}
+
+.product-options legend {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.size-choice-list,
+.color-choice-list {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.size-choice-list label,
+.color-choice-list label {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.size-choice-list input,
+.color-choice-list input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.size-choice-list span {
+  width: 56px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.size-choice-list input:checked + span {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.size-choice-list input:focus-visible + span,
+.color-choice-list input:focus-visible + .color-swatch {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.color-swatch {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.swatch-orange {
+  background: #f04b35;
+}
+
+.swatch-grey {
+  background: #555;
+}
+
+.swatch-olive {
+  background: #716344;
+}
+
+.color-choice-list input:checked + .color-swatch {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.continue-shopping {
+  display: inline-block;
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 2px 0 22px;
+}
+
+.continue-shopping span {
+  font-size: 28px;
+  font-weight: 700;
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+.detail-add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--color-accent);
+  color: white;
+  font-family: var(--font-button);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  text-align: center;
+  border-radius: 2px;
+}
+
+.detail-add-to-cart:hover,
+.detail-add-to-cart:focus-visible {
+  background: #a95425;
+}
+
+@media (max-width: 768px) {
+  .product-detail-page {
+    padding-bottom: 44px;
+  }
+
+  .product-detail-page .breadcrumb {
+    padding: 18px 0 24px;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: 0;
+  }
+
+  .product-detail-image img {
+    max-height: 440px;
+  }
+
+  .product-detail-info {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .product-detail-info h1 {
+    font-size: 34px;
+  }
+
+  .detail-description {
+    font-size: 14px;
+  }
+
+  .size-choice-list {
+    gap: 14px;
+  }
+
+  .size-choice-list span {
+    width: 48px;
+    height: 44px;
+  }
+}
