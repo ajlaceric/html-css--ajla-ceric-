@@ -1,6 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Lato:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("fonts/Archivo-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("fonts/IBMPlexSans-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =================================
    1. CSS VARIABLES
@@ -30,10 +69,9 @@
   --font-label: "Archivo", sans-serif;
 
   /* Button typography */
-  --font-button: "IBM Plex Sans", sans-serif;
   --button-font-size: 16px;
   --button-font-weight: 600;
-  --button-line-height: 48px;
+  --button-line-height: 1.2;
   --button-letter-spacing: 0.16px;
 
   /* Spacing */
@@ -45,6 +83,32 @@
 
   /* Layout */
   --container-width: 1200px;
+}
+/* =================================
+   2. TYPOGRAPHY
+================================= */
+
+/* Headings */
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+h3,
+h4 {
+  font-family: var(--font-label);
+  font-weight: 900;
+}
+
+/* Body text */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
 }
 
 /* =================================
@@ -70,7 +134,7 @@ body {
 
 img {
   width: 1440px;
-  height: 1080px;
+  height: auto;
   display: block;
   max-width: 100%;
 }
@@ -243,6 +307,7 @@ header > a img {
 /* Section label */
 .featured-products {
   padding: 64px 6.25%;
+}
 .section-heading {
   margin-bottom: 48px;
 }
@@ -265,7 +330,7 @@ header > a img {
   margin: 0 0 8px;
 }
 /* Section description */
-font-body {
+.section-description {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
@@ -278,14 +343,11 @@ font-body {
 
 /* FEATURED PRODUCTS GRID */
 
-
-/* FEATURED PRODUCTS GRID */
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  max-width: 1030px;
+  max-width: 1280px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -360,11 +422,229 @@ font-body {
   margin-top: 2px;
 }
 
-/* Mobile layout */
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+}
+
+/* Main footer layout */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.5fr;
+  gap: 32px;
+  padding: 20px 6%;
+}
+
+/* Footer columns */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-section:first-child {
+  justify-content: center;
+}
+
+/* Vertical dividers */
+.footer-section:nth-child(1),
+.footer-section:nth-child(2) {
+  border-right: 1px solid #aebfc2;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 115px;
+  height: auto;
+  display: block;
+}
+
+/* Footer headings */
+.footer-section h2 {
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+/* Footer text */
+.footer-section p {
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Newsletter */
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  max-width: 250px;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #aebfc2;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-family: var(--font-body);
+  font-size: 9px;
+  text-align: center;
+}
+
+.subscribe-button {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-family: var(--font-button);
+  font-size: 9px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background-color: var(--color-secondary);
+  border-top: 1px solid #aebfc2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4.5%;
+}
+
+.footer-bottom p {
+  font-family: var(--font-body);
+  font-size: 9px;
+  margin: 0;
+}
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
 @media (max-width: 768px) {
+  /* Product grid */
   .product-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
     padding: 0 16px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .footer-section:nth-child(2) {
+    border-right: none;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 480px) {
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    height: 60px;
+    box-sizing: border-box;
+  }
+
+  header > a img {
+    width: 75px;
+    height: auto;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .header-icons a:nth-child(1),
+  .header-icons a:nth-child(2) {
+    display: none;
+  }
+
+  .header-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Hamburger menu */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .menu-icon span {
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-text-white);
+  }
+
+  /* Hero */
+  .hero-content {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 0.95;
+    max-width: 260px;
+    margin: 0;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    border-right: none;
+    padding-bottom: 16px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
