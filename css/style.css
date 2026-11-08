@@ -41,9 +41,7 @@
   font-display: swap;
 }
 
-/* =================================
-   1. CSS VARIABLES
-================================= */
+/* 1. CSS VARIABLES  */
 
 :root {
   /* Brand colours */
@@ -84,9 +82,7 @@
   /* Layout */
   --container-width: 1200px;
 }
-/* =================================
-   2. TYPOGRAPHY
-================================= */
+  /* 2. TYPOGRAPHY */
 
 /* Headings */
 h1 {
@@ -111,9 +107,7 @@ body {
   font-weight: 400;
 }
 
-/* =================================
-   2. CSS RESET
-================================= */
+/* 2. CSS RESET  */
 
 * {
   box-sizing: border-box;
@@ -121,9 +115,7 @@ body {
   padding: 0;
 }
 
-/* =================================
-   3. GLOBAL STYLES
-================================= */
+ /*  3. GLOBAL STYLES */
 
 body {
   background-color: var(--color-background);
@@ -143,9 +135,7 @@ a {
   text-decoration: none;
 }
 
-/* =================================
-   4. HEADER
-================================= */
+   /* 4. HEADER */
 
 header {
   position: relative;
@@ -235,9 +225,7 @@ header > a img {
   outline-offset: 4px;
 }
 
-/* =================================
-   5. HERO SECTION
-================================= */
+ /*   5. HERO SECTION.  */
 
 .hero {
   background-image: url("../images/background.webp");
@@ -269,9 +257,7 @@ header > a img {
   margin-bottom: 20px;
 }
 
-/* =================================
-   6. BUTTONS
-================================= */
+  /* 6. BUTTONS.  */
 
 /* Primary button */
 
@@ -300,9 +286,7 @@ header > a img {
   cursor: pointer;
   text-decoration: none;
 }
-/* ==============================
-   7. FEATURED PRODUCTS
-================================= */
+ /* 7. FEATURED PRODUCTS */
 
 /* Section label */
 .featured-products {
@@ -422,9 +406,7 @@ header > a img {
   margin-top: 2px;
 }
 
-/* =================================
-   FOOTER
-================================= */
+  /* FOOTER */
 
 .footer {
   background-color: var(--color-primary);
@@ -529,37 +511,8 @@ header > a img {
   gap: 16px;
 }
 
-/* =================================
-   TABLET RESPONSIVE
-================================= */
 
-@media (max-width: 768px) {
-  /* Product grid */
-  .product-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    padding: 0 16px;
-  }
-
-  /* Footer */
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .footer-section:nth-child(2) {
-    border-right: none;
-  }
-
-  .footer-bottom {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-}
-
-/* =================================
-   MOBILE RESPONSIVE
-================================= */
+   /* MOBILE RESPONSIVE */
 
 @media (max-width: 480px) {
   /* Header */
@@ -650,10 +603,7 @@ header > a img {
 }
 
 
-/* =================================
-   PRODUCT LISTING PAGE
-   Page-specific styles
-================================= */
+ /* PRODUCT LISTING PAGE Page-specific styles */
 
 .breadcrumb {
   max-width: 1200px;
