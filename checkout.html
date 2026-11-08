@@ -1,35 +1,187 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Days | Shows all products</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <a href="index.html">
-        <img src="images/logo-150x80.svg" alt="Rainy Days homepage" />
-      </a>
-      <nav>
-        <div class="nav-links">
-          <a href="product-listing.html">Shop Jackets</a>
-          <a href="coming-soon.html">About Us</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainy Days | Checkout</title>
+  <meta name="description" content="Review your Rainy Days order and enter checkout details.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo-150x80.svg" alt="Rainy Days homepage">
+    </a>
+
+    <nav aria-label="Main navigation">
+      <div class="nav-links">
+        <a href="product-listing.html">Shop Jackets</a>
+        <a href="coming-soon.html">About Us</a>
+      </div>
+
+      <div class="header-icons">
+        <a href="coming-soon.html" aria-label="Search">
+          <img src="images/search.svg" alt="">
+        </a>
+        <a href="coming-soon.html" aria-label="Profile">
+          <img src="images/profile.svg" alt="">
+        </a>
+        <a href="cart.html" aria-label="Cart">
+          <img src="images/cart.svg" alt="">
+        </a>
+      </div>
+    </nav>
+
+    <span class="menu-icon" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+  </header>
+
+  <main class="checkout-page">
+    <section class="checkout-form" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Contact Information</h1>
+
+      <form action="checkout-success.html" method="get">
+        <div class="checkout-fields">
+          <div class="form-row">
+            <label>
+              Name
+              <input type="text" name="first-name" placeholder="Your name..." autocomplete="given-name" required>
+            </label>
+
+            <label>
+              Last name
+              <input type="text" name="last-name" placeholder="Your last name..." autocomplete="family-name" required>
+            </label>
+          </div>
+
+          <label>
+            Phone
+            <input type="tel" name="phone" placeholder="Your phone number..." autocomplete="tel" required>
+          </label>
+
+          <label>
+            Address
+            <input type="text" name="address" placeholder="Your complete address..." autocomplete="street-address" required>
+          </label>
+
+          <div class="form-row">
+            <label>
+              City
+              <input type="text" name="city" placeholder="Your city..." autocomplete="address-level2" required>
+            </label>
+
+            <label>
+              Country
+              <input type="text" name="country" placeholder="Your country..." autocomplete="country-name" required>
+            </label>
+          </div>
         </div>
 
-        <div class="header-icons">
-          <a href="coming-soon.html" aria-label="Search">
-            <img src="images/search.svg" alt="Search Icon" />
-          </a>
-          <a href="coming-soon.html" aria-label="Profile">
-            <img src="images/profile.svg" alt="Profile Icon" />
-          </a>
-          <a href="cart.html" aria-label="Cart">
-            <img src="images/cart.svg" alt="Cart Icon"
-          /></a>
+        <h2>Payment Information</h2>
+        <p class="payment-note">Demo checkout only. Do not enter real payment details.</p>
+
+        <div class="payment-fields">
+          <label>
+            Card holder name
+            <input type="text" name="cardholder" placeholder="John Doe" autocomplete="off">
+          </label>
+
+          <label>
+            CVV
+            <input type="text" name="cvv" placeholder="123" inputmode="numeric" autocomplete="off">
+          </label>
+
+          <label>
+            Card number
+            <input type="text" name="card-number" placeholder="1234 5678 9101 1213" inputmode="numeric" autocomplete="off">
+          </label>
+
+          <label>
+            Expiration Date
+            <input type="text" name="expiry" placeholder="MM / YY" autocomplete="off">
+          </label>
         </div>
-      </nav>
-    </header>
-    <main></main>
+
+        <button class="place-order place-order-mobile" type="submit">Place Order</button>
+      </form>
+    </section>
+
+    <aside class="checkout-summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Order Summary</h2>
+
+      <div class="summary-product">
+        <img src="images/jackets/summit.pro.png" alt="Summit Pro jacket in orange and grey">
+
+        <div class="summary-product-info">
+          <h3>Summit Pro Jacket</h3>
+          <p>Medium&nbsp; + &nbsp;Orange / Gray</p>
+        </div>
+
+        <p class="summary-product-price">$229.99</p>
+      </div>
+
+      <div class="summary-totals">
+        <p><span>Subtotal</span><span>$229.99</span></p>
+        <p><span>Estimated Shipping Fee</span><span>$0.00</span></p>
+        <p><span>Estimated Tax</span><span>$0.00</span></p>
+
+        <div class="order-total">
+          <strong>Order total:</strong>
+          <strong>$229.99</strong>
+        </div>
+      </div>
+
+      <a class="place-order place-order-desktop" href="checkout-success.html">Place Order</a>
+    </aside>
+  </main>
+  <footer class="footer">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/logo-footer.svg" alt="Rainy Days logo" />
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-section">
+          <h2>Shop</h2>
+          <p>Men's Jackets</p>
+          <p>Women's Jackets</p>
+          <p>New Arrivals</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h2>Contact</h2>
+          <p>Shipping</p>
+          <p>Returns</p>
+          <p>FAQ</p>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="footer-section">
+          <h2>Subscribe</h2>
+          <p>Get Outdoor Updates and Offers</p>
+
+          <div class="subscribe-form">
+            <div class="email-input">Enter your email</div>
+
+            <div class="subscribe-button">Subscribe</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Rainy Days. All rights reserved.</p>
+
+        <div class="footer-legal">
+          <p>Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

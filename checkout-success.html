@@ -3,33 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Days | Shows all products</title>
+    <meta name="description" content="Your Rainy Days order has been confirmed. View your order summary and delivery information." />
+    <title>Order Confirmed | Rainy Days</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img src="images/logo-150x80.svg" alt="Rainy Days homepage" />
+      <a href="index.html" aria-label="Rainy Days homepage">
+        <img src="images/logo-150x80.svg" alt="Rainy Days" />
       </a>
-      <nav>
+      <nav aria-label="Main navigation">
         <div class="nav-links">
           <a href="product-listing.html">Shop Jackets</a>
           <a href="coming-soon.html">About Us</a>
         </div>
-
         <div class="header-icons">
-          <a href="coming-soon.html" aria-label="Search">
-            <img src="images/search.svg" alt="Search Icon" />
-          </a>
-          <a href="coming-soon.html" aria-label="Profile">
-            <img src="images/profile.svg" alt="Profile Icon" />
-          </a>
-          <a href="cart.html" aria-label="Cart">
-            <img src="images/cart.svg" alt="Cart Icon"
-          /></a>
+          <a href="coming-soon.html" aria-label="Search"><img src="images/search.svg" alt="" /></a>
+          <a href="coming-soon.html" aria-label="Profile"><img src="images/profile.svg" alt="" /></a>
+          <a href="cart.html" aria-label="Cart"><img src="images/cart.svg" alt="" /></a>
         </div>
       </nav>
     </header>
-    <main></main>
+
+    <main class="confirmation-page">
+      <section class="confirmation-card" aria-labelledby="confirmation-title">
+        <div class="success-icon" aria-hidden="true"><span></span></div>
+        <h1 id="confirmation-title">Order Confirmed!</h1>
+        <p class="confirmation-message">Thank you for your purchase. Your order <strong>#RD12345</strong> has been received. We have sent a confirmation email to <strong>john.doe@example.com</strong>.</p>
+      </section>
+
+      <div class="confirmation-details">
+        <section class="detail-card order-summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">Order Summary</h2>
+          <div class="summary-product">
+            <img src="images/jackets/summit.pro.png" alt="Summit Pro outdoor jacket" />
+            <p>Summit Pro Jacket</p>
+          </div>
+        </section>
+
+        <section class="detail-card delivery-card" aria-labelledby="delivery-title">
+          <h2 id="delivery-title">Estimated Delivery</h2>
+          <div class="delivery-info">
+            <h3>Summit Pro Jacket</h3>
+            <p>Price: $129.00</p>
+          </div>
+          <a class="track-button" href="coming-soon.html">Track Your Order</a>
+          <a class="continue-button" href="product-listing.html">Continue Shopping</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/logo-footer.svg" alt="Rainy Days logo" />
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-section">
+          <h2>Shop</h2>
+          <p>Men's Jackets</p>
+          <p>Women's Jackets</p>
+          <p>New Arrivals</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h2>Contact</h2>
+          <p>Shipping</p>
+          <p>Returns</p>
+          <p>FAQ</p>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="footer-section">
+          <h2>Subscribe</h2>
+          <p>Get Outdoor Updates and Offers</p>
+
+          <div class="subscribe-form">
+            <div class="email-input">Enter your email</div>
+
+            <div class="subscribe-button">Subscribe</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Rainy Days. All rights reserved.</p>
+
+        <div class="footer-legal">
+          <p>Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
